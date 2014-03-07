@@ -1,1 +1,1 @@
- : D:\Melky\saude_gyn\saude_gyn\platforms\android\CordovaLib\ant-build\AndroidManifest.xml \
+ : D:\DropBox\Dropbox\Faculdade\saude_gyn\platforms\android\CordovaLib\ant-build\AndroidManifest.xml \
