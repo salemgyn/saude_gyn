@@ -145,6 +145,7 @@ D:\Melky\saude_gyn\platforms\android\assets\www\css\images\icons-png\user-white.
 D:\Melky\saude_gyn\platforms\android\assets\www\css\images\icons-png\video-black.png \
 D:\Melky\saude_gyn\platforms\android\assets\www\css\images\icons-png\video-white.png \
 D:\Melky\saude_gyn\platforms\android\assets\www\img\logo.png \
+D:\Melky\saude_gyn\platforms\android\assets\www\img\seta-local.png \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\index.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.mobile.js \

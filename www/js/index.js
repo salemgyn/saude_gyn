@@ -84,8 +84,8 @@ var App = {
 	    };	    
 		function onSuccessPosition(position){
 			console.log("[onSuccessPosition]");
-			map.setCenter(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
-			marker.setPosition(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+			App.map.setCenter(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+			App.marker.setPosition(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
 		};
 		function onErrorPosition(error){
 			console.log("[onErrorPosition]");
