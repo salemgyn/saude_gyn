@@ -34,7 +34,6 @@
         <div class="app ui-page-theme-a">
 			<div data-role="page" id="menuPage">
 				<div data-role="header" style="overflow:hidden;" data-position="fixed">
-					<a href="#" id="btnTema" data-icon="gear" class="ui-btn-left">Mudar Tema</a>
 					<h1>Saúde GYN</h1>
 					<a href="#" data-icon="gear" class="ui-btn-right">Ajustes</a>
 				</div>	
@@ -75,16 +74,32 @@
 			</div>
 			<div data-role="page" id="mapPage" style="height: 100%;">
 				<div data-role="header" style="overflow:hidden;" data-position="fixed">
-					<a href="#menuPage" id="btnTema" data-icon="gear" class="ui-btn-left">Voltar</a>
 					<h1>Mapa</h1>
 				</div>	
 				<div id="divMap" style="height: 100%;"/>		
 			</div>
         </div>	
         <script type="text/javascript" src="phonegap.js"></script>  
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/jquery.mobile.js"></script>	 
+		<script type="text/javascript" src="js/jquery.js"></script>	 
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-8mkbyndoksIyk1fbL31SjRbyG1iKvc4&sensor=true"></script>
         <script type="text/javascript" src="js/index.js"></script> 
+        <script type="text/javascript">
+        	jQuery(document).bind("mobileinit",function(){
+        		console.log("Configurando Jquery.Mobile");
+
+        		jQuery.support.cors = true;
+        		jQuery.mobile.allowCrossDomainPages = true;
+
+        		jQuery.mobile.phonegapNavigationEnabled = true;
+        		jQuery.mobile.defaultDialogTransition = "pop";
+        		jQuery.mobile.defaultPageTransition = "none";
+
+        		jQuery.mobile.loader.prototype.options.text = "carregando";
+        		jQuery.mobile.loader.prototype.options.textVisible = true;
+        		jQuery.mobile.loader.prototype.options.theme = "a";
+        	});
+        	App.init();
+        </script>
+		<script type="text/javascript" src="js/jquery.mobile.js"></script>
     </body>
 </html>
