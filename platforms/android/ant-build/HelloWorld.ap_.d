@@ -149,7 +149,12 @@ D:\Melky\saude_gyn\platforms\android\assets\www\img\seta-local.png \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\index.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.mobile.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www\compass.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www\CompassError.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www\CompassHeading.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\Coordinates.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\geolocation.js \
