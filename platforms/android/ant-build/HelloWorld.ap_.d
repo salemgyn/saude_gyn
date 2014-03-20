@@ -149,6 +149,7 @@ D:\Melky\saude_gyn\platforms\android\assets\www\img\seta-local.png \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\index.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.mobile.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\js\PGProxy.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www \
