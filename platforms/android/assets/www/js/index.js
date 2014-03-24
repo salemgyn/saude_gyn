@@ -6,18 +6,24 @@ var App = {
     "map":null,
     "infowindow":null,
     "markerSeta":null,
+    "directionsDisplay":null,
+    "directionsService":null,
+    "request":null,
+    "tts":null,
+    "utterance":null,
  	"init":function(){
 		console.log("[init]");
 	 
 	    if (document.URL.indexOf("http://") === -1) {
 	        App.testing_on_desktop = false;
 	    }
-
-	    jQuery(document).ready(function () {
-	        console.log("jQuery finished loading");
 	 
-	 		var deviceReadyDeferred = jQuery.Deferred();
+	    jQuery(document).ready(function () {
+	        console.log("jQuery finished loading");	
+
+	        var deviceReadyDeferred = jQuery.Deferred();
 	 		var jqmReadyDeferred = jQuery.Deferred();
+	 
 	        if (App.testing_on_desktop) {
 	            console.log("PhoneGap finished loading");
 	            _onDeviceReady();
@@ -35,7 +41,7 @@ var App = {
 	            jqmReadyDeferred.resolve();
 	        });
 	 
-	 		jQuery.when(deviceReadyDeferred, jqmReadyDeferred).then(function(){
+	        jQuery.when(deviceReadyDeferred, jqmReadyDeferred).then(function(){
 		        console.log("PhoneGap & jQuery.Mobile finished loading");
 		        initPages();
 		        console.log("App finished loading");
@@ -45,7 +51,16 @@ var App = {
 	 
 	    function _onDeviceReady () {
 			console.log("[_onDeviceReady]");
+
 			PGproxy.navigator.splashscreen.hide();
+
+			App.directionsService = new google.maps.DirectionsService();
+
+			App.directionsDisplay = new google.maps.DirectionsRenderer();
+
+			App.utterance = new SpeechSynthesisUtterance();
+			App.utterance.lang = "pt-BR";
+			App.utterance.text = "Olá, Bem vindo ao Saude Gyn!"
 
 			App.markerSeta = {
 				path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
@@ -53,18 +68,23 @@ var App = {
 				fillOpacity: 0.5,
 				scale: 5,
 				strokeColor: "black",
-				strokeWeight: 2
-			};
+				strokeWeight: 2,
+				url: "img/seta-local.png"
+ 			};
 
 			jQuery(document).delegate("#mapPage", "pageshow", function() {
 				jQuery("#divMap").css("height",parseInt(jQuery(window).height())*0.95); //0.95 = 95% of the viewport to display the map		
-				App.map = new google.maps.Map(document.getElementById("divMap"),{zoom: 16, center: new google.maps.LatLng(-16.6958759,-49.3042674), mapTypeId: google.maps.MapTypeId.ROADMAP});
+				App.map = new google.maps.Map(document.getElementById("divMap"),{zoom: 16, center: new google.maps.LatLng(-16.6958759,-49.3042674), mapTypeId: google.maps.MapTypeId.ROADMAP, rotateControl: true, panControl: true});
 				loadMakers();
 				App.marker = new google.maps.Marker({
 					position: new google.maps.LatLng(-16.6958759,-49.3042674),
 					map: App.map,
 					icon: App.markerSeta
 				});
+
+				speechSynthesis.speak(App.utterance);
+
+				App.directionsDisplay.setMap(App.map);
 
 				navigator.geolocation.getCurrentPosition(onSuccessPosition,onErrorPosition);
 				navigator.geolocation.watchPosition(onSuccessPosition,onErrorPosition,{ maximumAge: 3000, enableHighAccuracy: true });
@@ -84,8 +104,7 @@ var App = {
 			});
 	    };
 	    function onSuccess(heading) {	    	
-			console.log("[heading] compass at: "+heading.magneticHeading);	
-			App.markerSeta = {
+	    	App.markerSeta = {
 				path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
 				fillColor: "red",
 				fillOpacity: 0.5,
@@ -95,6 +114,7 @@ var App = {
 				rotation: heading.magneticHeading + 180
 			};		
 			App.marker.setIcon(App.markerSeta);
+			console.log("[heading] compass at: "+heading.magneticHeading);			
 		};
 
 		function onError(compassError) {
@@ -123,8 +143,8 @@ var App = {
 			jQuery.ajax({
 				url: "./ajax/farmacias.json",
 				type: "get",
-				contentType: "application/json; charset=UTF-8",
 				success: function(data){
+					console.log(data);
 					data = JSON.parse(data);
 					jQuery.each(data.farmacias, function(i,val){
 						var m = new google.maps.Marker({
@@ -136,7 +156,19 @@ var App = {
 					        var infoWindow = new google.maps.InfoWindow({
 					        	content: "<b>"+val.title+"</b>"
 					        });
-					        infoWindow.open(App.map,m)
+					        infoWindow.open(App.map,m);
+					        App.request = {
+					        	origin: App.marker.getPosition(),
+					        	destination: m.getPosition(),
+					        	travelMode: google.maps.TravelMode.DRIVING
+					        };
+					        App.directionsService.route(App.request, function(response, status){
+					        	console.log("Iniciando Roteamento!");
+					        	if(status == google.maps.DirectionsStatus.OK){
+					        		console.log(	status);
+					        		App.directionsDisplay.setDirections(response);
+					        	}
+					        });
 					    });
 						App.markerArray.push(m);
 					});

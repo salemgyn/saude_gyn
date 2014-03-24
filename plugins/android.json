@@ -7,7 +7,8 @@
         "res/xml/config.xml": {
             "/*": {
                 "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.GeoBroker\" /></feature>": 1,
-                "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>": 1
+                "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>": 1,
+                "<feature name=\"SpeechSynthesis\"><param name=\"android-package\" value=\"org.apache.cordova.speech.SpeechSynthesis\" /></feature>": 1
             }
         },
         "AndroidManifest.xml": {
@@ -22,6 +23,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.apache.cordova.device-orientation": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "org.apache.cordova.speech.speechsynthesis": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },

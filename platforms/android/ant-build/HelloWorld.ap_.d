@@ -152,6 +152,7 @@ D:\Melky\saude_gyn\platforms\android\assets\www\js\jquery.mobile.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\js\PGProxy.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www\compass.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.device-orientation\www\CompassError.js \
@@ -161,6 +162,12 @@ D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolo
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\geolocation.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\Position.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\PositionError.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis\www \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis\www\SpeechSynthesis.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis\www\SpeechSynthesisEvent.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis\www\SpeechSynthesisUtterance.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis\www\SpeechSynthesisVoice.js \
+D:\Melky\saude_gyn\platforms\android\assets\www\plugins\org.apache.cordova.speech.speechsynthesis\www\SpeechSynthesisVoiceList.js \
 D:\Melky\saude_gyn\platforms\android\assets\www\res\icon \
 D:\Melky\saude_gyn\platforms\android\assets\www\res\screen \
 D:\Melky\saude_gyn\platforms\android\assets\www\res\icon\android \

@@ -1,3 +1,0 @@
-function onload() {
-	alert("test");
-}

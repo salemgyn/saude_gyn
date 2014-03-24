@@ -15,4 +15,5 @@ D:\Melky\saude_gyn\platforms\android\ant-build\classes\org\apache\cordova\geoloc
 D:\Melky\saude_gyn\platforms\android\ant-build\classes\org\apache\cordova\geolocation\GeoBroker.class \
 D:\Melky\saude_gyn\platforms\android\ant-build\classes\org\apache\cordova\geolocation\GPSListener.class \
 D:\Melky\saude_gyn\platforms\android\ant-build\classes\org\apache\cordova\geolocation\NetworkListener.class \
+D:\Melky\saude_gyn\platforms\android\ant-build\classes\org\apache\cordova\speech\SpeechSynthesis.class \
 D:\Melky\saude_gyn\platforms\android\ant-build\dexedLibs\classes-ac8c9768630774e228ac89bbcf81bc5e.jar \
